@@ -4,6 +4,8 @@ interface CategoryFilterProps {
   onSelectCategory: (category: string) => void;
 }
 
+import { getTechIcon } from "@/app/utils/techIcons";
+
 export function CategoryFilter({
   categories,
   selectedCategories,
@@ -30,19 +32,25 @@ export function CategoryFilter({
         All
       </button>
 
-      {categories.map((category) => (
-        <button
-          key={category}
-          onClick={() => onSelectCategory(category)}
-          className={`px-3 py-1 text-sm rounded transition-colors cursor-pointer ${
-            selectedCategories.includes(category)
-              ? "bg-blue-500 text-white"
-              : "bg-gray-100 text-gray-700 hover:bg-gray-200"
-          }`}
-        >
-          {category}
-        </button>
-      ))}
+      {categories.map((category) => {
+        const iconSrc = getTechIcon(category);
+        return (
+          <button
+            key={category}
+            onClick={() => onSelectCategory(category)}
+            className={`px-3 py-2 text-sm rounded transition-colors cursor-pointer flex items-center gap-2 ${
+              selectedCategories.includes(category)
+                ? "bg-blue-500 text-white"
+                : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+            }`}
+          >
+            {iconSrc && (
+              <img src={iconSrc} alt={`${category} icon`} className="w-5 h-5" />
+            )}
+            {category}
+          </button>
+        );
+      })}
     </div>
   );
 }

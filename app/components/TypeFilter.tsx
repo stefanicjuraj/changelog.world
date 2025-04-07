@@ -64,7 +64,7 @@ export function TypeFilter({
               .forEach((type) => onSelectType(type));
           }
         }}
-        className={`px-3 py-1 text-sm rounded transition-colors cursor-pointer ${
+        className={`px-3 py-2 text-sm rounded transition-colors cursor-pointer ${
           selectedTypes.length === types.length
             ? "bg-gray-700 text-white"
             : "bg-gray-100 text-gray-700 hover:bg-gray-200"
@@ -77,7 +77,7 @@ export function TypeFilter({
         <button
           key={type}
           onClick={() => onSelectType(type)}
-          className={`px-3 py-1 text-sm rounded transition-colors cursor-pointer ${
+          className={`px-3 py-2 text-sm rounded transition-colors cursor-pointer ${
             selectedTypes.includes(type)
               ? getSelectedTypeColor(type)
               : getTypeColor(type)
