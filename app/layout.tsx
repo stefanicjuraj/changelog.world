@@ -16,6 +16,20 @@ export const metadata: Metadata = {
     "Frameworks News",
     "Changelog",
   ],
+  openGraph: {
+    title: "changelog.world",
+    description: "Tech News in a Developer-Friendly Format",
+    url: "https://changelog.world",
+    siteName: "changelog.world",
+    images: [
+      {
+        url: "",
+        width: 1200,
+        height: 630,
+      },
+    ],
+    type: "website",
+  },
 };
 
 export default function RootLayout({
