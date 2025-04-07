@@ -5,6 +5,17 @@ import Script from "next/script";
 export const metadata: Metadata = {
   title: "changelog.world",
   description: "Tech News in a Developer-Friendly Format",
+  keywords: [
+    "Tech News",
+    "Developer News",
+    "Programming News",
+    "Frameworks News",
+    "Programming",
+    "Frameworks",
+    "Programming News",
+    "Frameworks News",
+    "Changelog",
+  ],
 };
 
 export default function RootLayout({
