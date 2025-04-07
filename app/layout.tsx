@@ -3,8 +3,8 @@ import "./globals.css";
 import Navbar from "./components/Navbar";
 import Script from "next/script";
 export const metadata: Metadata = {
-  title: "",
-  description: "",
+  title: "changelog.world",
+  description: "Tech News in a Developer-Friendly Format",
 };
 
 export default function RootLayout({
