@@ -4,7 +4,7 @@ interface CategoryFilterProps {
   onSelectCategory: (category: string) => void;
 }
 
-import { getTechIcon } from "@/app/utils/techIcons";
+import { getTechIcon, invertIconInDarkMode } from "@/app/utils/techIcons";
 
 export function CategoryFilter({
   categories,
@@ -34,18 +34,23 @@ export function CategoryFilter({
 
       {categories.map((category) => {
         const iconSrc = getTechIcon(category);
+        const shouldInvert = invertIconInDarkMode(category);
         return (
           <button
             key={category}
             onClick={() => onSelectCategory(category)}
-            className={`px-3 py-2 text-sm rounded transition-colors cursor-pointer flex items-center gap-2 ${
+            className={`px-3 py-2 bg-gray-100 dark:bg-[#222] text-sm rounded transition-colors cursor-pointer flex items-center gap-2 ${
               selectedCategories.includes(category)
-                ? "bg-blue-500 text-white"
-                : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+                ? "border-1 border-black dark:border-white"
+                : "text-gray-700 hover:bg-gray-200 dark:bg-[#222] dark:text-white dark:hover:bg-[#1a1a1a]"
             }`}
           >
             {iconSrc && (
-              <img src={iconSrc} alt={`${category} icon`} className="w-5 h-5" />
+              <img
+                src={iconSrc}
+                alt={`${category} icon`}
+                className={`w-5 h-5 ${shouldInvert ? "dark:invert" : ""}`}
+              />
             )}
             {category}
           </button>
