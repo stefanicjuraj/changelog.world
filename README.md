@@ -25,3 +25,7 @@
 - [x] Laravel
 - [x] Spring
 - [x] Django
+
+**CSS**
+
+- [x] Tailwind CSS
