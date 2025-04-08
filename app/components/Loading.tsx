@@ -24,9 +24,9 @@ export function Loading() {
       <img
         src="/assets/icons/loading.svg"
         alt="Loading"
-        className="w-8 h-8 animate-spin text-center mx-auto"
+        className="w-8 h-8 animate-spin text-center mx-auto dark:invert"
       />
-      <p className="mt-4 text-black text-sm">{loadingTexts[textIndex]}</p>
+      <p className="mt-4 text-sm">{loadingTexts[textIndex]}</p>
     </div>
   );
 }
