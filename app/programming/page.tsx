@@ -6,6 +6,7 @@ import { ChangelogType } from "@/types/changelog";
 import { NewsList } from "@/app/components/NewsList";
 import { CategoryFilter } from "@/app/components/CategoryFilter";
 import { TypeFilter } from "@/app/components/TypeFilter";
+import { Loading } from "@/app/components/Loading";
 
 export default function Home() {
   const [newsData, setNewsData] = useState<NewsEntry[]>([]);
@@ -83,15 +84,7 @@ export default function Home() {
   })();
 
   if (loading) {
-    return (
-      <div className="max-w-screen-lg mx-auto mt-24">
-        <img
-          src="/assets/icons/loading.svg"
-          alt="Loading"
-          className="w-8 h-8 animate-spin text-center mx-auto"
-        />
-      </div>
-    );
+    return <Loading />;
   }
 
   if (error) {
