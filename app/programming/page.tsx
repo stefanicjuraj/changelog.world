@@ -125,7 +125,7 @@ export default function Home() {
         <p className="text-gray-600">{filteredNews.length} results</p>
       </div>
 
-      <div className="max-w-screen-md mx-auto rounded-lg shadow-sm border border-gray-200 p-6">
+      <div className="max-w-screen-md mx-auto rounded-lg shadow-sm border border-gray-200 p-6 bg-white dark:bg-[#111]">
         {filteredNews.length === 0 ? (
           <p className="py-4 text-center text-gray-500">
             No matching entries found
