@@ -38,7 +38,7 @@ export function NewsItem({ title, date, category, type, url }: NewsItemProps) {
             <img
               src={categoryIcon}
               alt={`${category} icon`}
-              className="w-5 h-5"
+              className="w-7 h-7 mr-1"
             />
           )}
           <div className="flex flex-col items-start">
