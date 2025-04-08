@@ -33,3 +33,7 @@
 **Deployments**
 
 - [x] Vercel
+
+**Git**
+
+- [x] GitHub
