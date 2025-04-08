@@ -1,6 +1,6 @@
 import { ChangelogType } from "@/types/changelog";
 import { getTypeColor } from "./TypeFilter";
-import { getTechIcon } from "@/app/utils/techIcons";
+import { getTechIcon, invertIconInDarkMode } from "@/app/utils/techIcons";
 
 interface NewsItemProps {
   title: string;
@@ -29,6 +29,7 @@ export function NewsItem({ title, date, category, type, url }: NewsItemProps) {
   const cleanTitle = stripHtmlTags(title);
   const formattedDate = formatDate(date);
   const categoryIcon = getTechIcon(category);
+  const shouldInvert = invertIconInDarkMode(category);
 
   return (
     <div className="py-4 border-b border-gray-200 last:border-0">
@@ -38,7 +39,7 @@ export function NewsItem({ title, date, category, type, url }: NewsItemProps) {
             <img
               src={categoryIcon}
               alt={`${category} icon`}
-              className="w-7 h-7 mr-1"
+              className={`w-7 h-7 mr-1 ${shouldInvert ? "dark:invert" : ""}`}
             />
           )}
           <div className="flex flex-col items-start">

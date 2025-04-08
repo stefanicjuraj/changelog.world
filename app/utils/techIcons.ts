@@ -42,3 +42,8 @@ export const getTechIcon = (tech: string): string | null => {
       return null;
   }
 };
+
+export const invertIconInDarkMode = (tech: string): boolean => {
+  const invertIcons = ["github", "vercel", "next.js", "go", "express"];
+  return invertIcons.includes(tech.toLowerCase());
+};
