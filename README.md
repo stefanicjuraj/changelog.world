@@ -29,3 +29,7 @@
 **CSS**
 
 - [x] Tailwind CSS
+
+**Deployments**
+
+- [x] Vercel
