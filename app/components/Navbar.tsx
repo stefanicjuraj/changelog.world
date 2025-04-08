@@ -22,7 +22,7 @@ export default function Navbar() {
   return (
     <nav
       style={{ backgroundColor: "var(--app-navbar-color)" }}
-      className="shadow-sm max-w-screen-lg mx-auto mt-2 sticky top-0"
+      className="shadow-sm max-w-screen-lg mx-auto mt-2 sticky top-0 rounded-b-lg"
     >
       <div className="max-w-7xl mx-auto px-4 py-7">
         <div className="flex justify-between">
