@@ -54,7 +54,7 @@ export function NewsItem({ title, date, category, type, url }: NewsItemProps) {
         </div>
         <div className="flex-1">
           <div>
-            <h3 className="text-black">{cleanTitle}</h3>
+            <h2>{cleanTitle}</h2>
             <a
               href={url}
               className="mt-2 text-blue-600 hover:underline text-xs"
