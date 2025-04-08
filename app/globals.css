@@ -8,9 +8,9 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --app-background-color: #191919;
+    --app-background-color: #151515;
     --app-text-color: #fff;
-    --app-navbar-color: #191919;
+    --app-navbar-color: #111;
   }
 }
 
