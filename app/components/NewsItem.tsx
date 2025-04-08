@@ -34,7 +34,7 @@ export function NewsItem({ title, date, category, type, url }: NewsItemProps) {
   return (
     <div className="py-4 border-b border-gray-200 last:border-0">
       <div className="flex items-center gap-4">
-        <div className="flex items-center gap-3 w-40 min-w-40">
+        <div className="flex items-center w-40 gap-3 min-w-40">
           {categoryIcon && (
             <img
               src={categoryIcon}
@@ -43,7 +43,7 @@ export function NewsItem({ title, date, category, type, url }: NewsItemProps) {
             />
           )}
           <div className="flex flex-col items-start">
-            <span className="px-2 py-1 mb-2 text-sm rounded bg-gray-100 text-gray-600 w-fit">
+            <span className="px-2 py-1 mb-2 text-sm text-gray-600 bg-gray-100 rounded w-fit">
               {category}
             </span>
             <p
@@ -58,7 +58,7 @@ export function NewsItem({ title, date, category, type, url }: NewsItemProps) {
             <h2>{cleanTitle}</h2>
             <a
               href={url}
-              className="mt-2 text-blue-600 hover:underline text-xs"
+              className="mt-2 text-xs text-blue-600 hover:underline"
               target="_blank"
               rel="noopener noreferrer"
             >

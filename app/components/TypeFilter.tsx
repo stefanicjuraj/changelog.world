@@ -6,7 +6,6 @@ interface TypeFilterProps {
   onSelectType: (type: ChangelogType) => void;
 }
 
-// Function to get color based on changelog type
 export function getTypeColor(type: ChangelogType): string {
   switch (type) {
     case "Added":
@@ -55,10 +54,8 @@ export function TypeFilter({
       <button
         onClick={() => {
           if (selectedTypes.length === types.length) {
-            // If all are selected, clicking "All" deselects everything
             types.forEach((type) => onSelectType(type));
           } else {
-            // Otherwise, select all types
             types
               .filter((type) => !selectedTypes.includes(type))
               .forEach((type) => onSelectType(type));

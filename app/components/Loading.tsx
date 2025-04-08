@@ -20,11 +20,11 @@ export function Loading() {
   }, []);
 
   return (
-    <div className="max-w-screen-lg mx-auto mt-24 flex flex-col items-center">
+    <div className="flex flex-col items-center max-w-screen-lg mx-auto mt-24">
       <img
         src="/assets/icons/loading.svg"
         alt="Loading"
-        className="w-8 h-8 animate-spin text-center mx-auto dark:invert"
+        className="w-8 h-8 mx-auto text-center animate-spin dark:invert"
       />
       <p className="mt-4 text-sm">{loadingTexts[textIndex]}</p>
     </div>

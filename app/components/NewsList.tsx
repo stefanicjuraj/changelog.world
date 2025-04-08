@@ -17,7 +17,7 @@ export function NewsList({ news }: NewsListProps) {
           return (
             <div
               key={item.id ?? `${item.title}-${timeKey}-${index}`}
-              className="flex justify-between items-center py-4"
+              className="flex items-center justify-between py-4"
             >
               <div className="flex-1">
                 <NewsItem

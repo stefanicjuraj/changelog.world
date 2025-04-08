@@ -89,8 +89,8 @@ export default function Home() {
 
   if (error) {
     return (
-      <main className="max-w-screen-lg mx-auto px-4 py-8">
-        <div className="text-center py-12">
+      <main className="max-w-screen-lg px-4 py-8 mx-auto">
+        <div className="py-12 text-center">
           <p className="text-lg text-red-500">Error: {error}</p>
         </div>
       </main>
@@ -98,15 +98,15 @@ export default function Home() {
   }
 
   return (
-    <main className="max-w-screen-lg mx-auto px-4 py-8">
+    <main className="max-w-screen-lg px-4 py-8 mx-auto">
       <header className="mt-4 mb-10 text-center">
-        <h1 className="text-3xl font-bold mb-2">
+        <h1 className="mb-2 text-3xl font-bold">
           Tech News in a Developer-Friendly Format
         </h1>
       </header>
 
-      <div className="mb-2 max-w-screen-md mx-auto">
-        <h2 className="text-lg font-medium mb-1">Filter by tech</h2>
+      <div className="max-w-screen-md mx-auto mb-2">
+        <h2 className="mb-1 text-lg font-medium">Filter by tech</h2>
         <CategoryFilter
           categories={categories}
           selectedCategories={selectedCategories}
@@ -114,8 +114,8 @@ export default function Home() {
         />
       </div>
 
-      <div className="mb-6 max-w-screen-md mx-auto">
-        <h2 className="text-lg font-medium mb-1">Filter by type</h2>
+      <div className="max-w-screen-md mx-auto mb-6">
+        <h2 className="mb-1 text-lg font-medium">Filter by type</h2>
         <TypeFilter
           types={types}
           selectedTypes={selectedTypes}
@@ -123,7 +123,7 @@ export default function Home() {
         />
       </div>
 
-      <div className="mb-6 max-w-screen-md mx-auto text-right">
+      <div className="max-w-screen-md mx-auto mb-6 text-right">
         <p>{filteredNews.length} results</p>
       </div>
 
