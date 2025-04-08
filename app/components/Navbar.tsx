@@ -34,10 +34,18 @@ export default function Navbar() {
 
           {/* Desktop menu */}
           <div className="hidden sm:flex items-center space-x-8">
-            <Link prefetch={true} href="/programming">
+            <Link
+              prefetch={true}
+              href="/programming"
+              className="hover:underline"
+            >
               Programming
             </Link>
-            <Link prefetch={true} href="/frameworks">
+            <Link
+              prefetch={true}
+              href="/frameworks"
+              className="hover:underline"
+            >
               Frameworks
             </Link>
             <a
