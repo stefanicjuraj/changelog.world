@@ -19,11 +19,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: "changelog.world",
     description: "Tech News in a Developer-Friendly Format",
-    url: "https://changelog.world/assets/images/changelog.world.png",
+    url: "https://changelog.world",
     siteName: "changelog.world",
     images: [
       {
-        url: "",
+        url: "https://changelog.world/assets/images/changelog.world.png",
         width: 1200,
         height: 630,
       },
