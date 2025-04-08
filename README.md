@@ -12,3 +12,16 @@
 - [x] Go
 - [x] PHP
 - [x] Swift
+
+**Frameworks**
+
+- [x] React
+- [x] Angular
+- [x] Vue
+- [x] Next.js
+- [x] Svelte
+- [x] Ruby on Rails
+- [x] Express
+- [x] Laravel
+- [x] Spring
+- [x] Django
