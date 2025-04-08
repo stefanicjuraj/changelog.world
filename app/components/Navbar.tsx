@@ -40,7 +40,17 @@ export default function Navbar() {
             <Link prefetch={true} href="/frameworks">
               Frameworks
             </Link>
-
+            <a
+              href="https://github.com/stefanicjuraj/changelog.world"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="/assets/icons/github.svg"
+                alt="GitHub"
+                className="w-5 h-5 dark:invert"
+              />
+            </a>
             <div className="hidden sm:block">{currentDate}</div>
           </div>
 
