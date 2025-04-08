@@ -5,6 +5,7 @@ import Link from "next/link";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
   const [currentDate, setCurrentDate] = useState("");
 
   useEffect(() => {
@@ -17,6 +18,7 @@ export default function Navbar() {
         day: "numeric",
       })
     );
+    setMounted(true);
   }, []);
 
   return (
@@ -59,7 +61,7 @@ export default function Navbar() {
                 className="w-5 h-5 dark:invert"
               />
             </a>
-            <div className="hidden sm:block">{currentDate}</div>
+            {mounted && <div className="hidden sm:block">{currentDate}</div>}
           </div>
 
           {/* Mobile menu button */}
