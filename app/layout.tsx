@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     siteName: "changelog.world",
     images: [
       {
-        url: "https://changelog.world/assets/images/changelog.world.png",
+        url: "https://changelog.world/assets/images/changelog.world-dark.png",
         width: 1200,
         height: 630,
       },
