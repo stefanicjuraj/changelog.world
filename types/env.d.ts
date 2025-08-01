@@ -11,7 +11,6 @@ declare namespace NodeJS {
     FEED_URL_PHP: string;
     FEED_URL_SWIFT: string;
     FEED_URL_RAILS: string;
-    FEED_URL_ANGULAR: string;
     FEED_URL_LARAVEL: string;
     FEED_URL_DJANGO: string;
     FEED_URL_CPP: string;
@@ -20,5 +19,6 @@ declare namespace NodeJS {
     FEED_URL_EXPRESS: string;
     FEED_URL_SPRING_BOOT: string;
     FEED_URL_NODEJS: string;
+    FEED_URL_GITLAB: string;
   }
 }

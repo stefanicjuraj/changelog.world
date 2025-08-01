@@ -14,7 +14,6 @@ const nextConfig: NextConfig = {
     FEED_URL_PHP: process.env.FEED_URL_PHP || "",
     FEED_URL_SWIFT: process.env.FEED_URL_SWIFT || "",
     FEED_URL_RAILS: process.env.FEED_URL_RAILS || "",
-    FEED_URL_ANGULAR: process.env.FEED_URL_ANGULAR || "",
     FEED_URL_LARAVEL: process.env.FEED_URL_LARAVEL || "",
     FEED_URL_DJANGO: process.env.FEED_URL_DJANGO || "",
     FEED_URL_CPP: process.env.FEED_URL_CPP || "",
@@ -22,6 +21,8 @@ const nextConfig: NextConfig = {
     FEED_URL_JAVA: process.env.FEED_URL_JAVA || "",
     FEED_URL_EXPRESS: process.env.FEED_URL_EXPRESS || "",
     FEED_URL_SPRING_BOOT: process.env.FEED_URL_SPRING_BOOT || "",
+    FEED_URL_NODEJS: process.env.FEED_URL_NODEJS || "",
+    FEED_URL_GITLAB: process.env.FEED_URL_GITLAB || "",
   },
 };
 

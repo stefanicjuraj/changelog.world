@@ -10,7 +10,6 @@ export async function GET() {
       process.env.FEED_URL_SVELTE,
       process.env.FEED_URL_VUEJS,
       process.env.FEED_URL_RAILS,
-      process.env.FEED_URL_ANGULAR,
       process.env.FEED_URL_LARAVEL,
       process.env.FEED_URL_DJANGO,
       process.env.FEED_URL_EXPRESS,

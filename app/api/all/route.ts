@@ -16,7 +16,6 @@ export async function GET() {
       process.env.FEED_URL_PHP,
       process.env.FEED_URL_SWIFT,
       process.env.FEED_URL_RAILS,
-      process.env.FEED_URL_ANGULAR,
       process.env.FEED_URL_LARAVEL,
       process.env.FEED_URL_DJANGO,
       process.env.FEED_URL_CPP,
@@ -25,6 +24,7 @@ export async function GET() {
       process.env.FEED_URL_EXPRESS,
       process.env.FEED_URL_SPRING_BOOT,
       process.env.FEED_URL_NODEJS,
+      process.env.FEED_URL_GITLAB,
     ].filter(Boolean) as string[];
 
     const allNewsPromises = feedUrls.map(async (url) => {

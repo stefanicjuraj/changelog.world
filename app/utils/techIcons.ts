@@ -14,8 +14,6 @@ export const getTechIcon = (tech: string): string | null => {
       return "/assets/icons/django.svg";
     case "ruby on rails":
       return "/assets/icons/rubyonrails.svg";
-    case "angular":
-      return "/assets/icons/angular.svg";
     case "tailwind css":
       return "/assets/icons/tailwindcss.svg";
     case "go":
@@ -40,6 +38,8 @@ export const getTechIcon = (tech: string): string | null => {
       return "/assets/icons/spring.svg";
     case "node.js":
       return "/assets/icons/nodejs.svg";
+    case "gitlab":
+      return "/assets/icons/gitlab.svg";
     default:
       return null;
   }
