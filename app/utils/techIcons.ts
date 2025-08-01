@@ -38,6 +38,8 @@ export const getTechIcon = (tech: string): string | null => {
       return "/assets/icons/vercel.svg";
     case "spring":
       return "/assets/icons/spring.svg";
+    case "node.js":
+      return "/assets/icons/nodejs.svg";
     default:
       return null;
   }

@@ -24,6 +24,7 @@ export async function GET() {
       process.env.FEED_URL_JAVA,
       process.env.FEED_URL_EXPRESS,
       process.env.FEED_URL_SPRING_BOOT,
+      process.env.FEED_URL_NODEJS,
     ].filter(Boolean) as string[];
 
     const allNewsPromises = feedUrls.map(async (url) => {

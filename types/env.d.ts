@@ -19,5 +19,6 @@ declare namespace NodeJS {
     FEED_URL_JAVA: string;
     FEED_URL_EXPRESS: string;
     FEED_URL_SPRING_BOOT: string;
+    FEED_URL_NODEJS: string;
   }
 }
