@@ -107,6 +107,13 @@ function ProgrammingContent() {
         />
       </div>
 
+      <div className="max-w-screen-md mx-auto mb-4">
+        <p className="text-black dark:text-white">
+          {filteredNews.length}{" "}
+          {filteredNews.length === 1 ? "result" : "results"}
+        </p>
+      </div>
+
       <div className="max-w-screen-md mx-auto rounded-lg shadow-sm border border-gray-200 p-6 bg-white dark:bg-[#111]">
         {filteredNews.length === 0 ? (
           <p className="py-4 text-center text-gray-500">
