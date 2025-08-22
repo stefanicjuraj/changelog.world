@@ -105,7 +105,7 @@ function formatAsText(
   const endIndex = startIndex + limit;
   const pageEntries = entries.slice(startIndex, endIndex);
 
-  let output = "CHANGELOG.WORLD\n";
+  let output = "\nCHANGELOG.WORLD\n";
   output += "===================\n\n";
 
   if (totalEntries === 0) {
@@ -137,26 +137,27 @@ function formatAsText(
       output += `Source: ${entry.url}\n`;
 
       if (index < pageEntries.length - 1) {
-        output += "\n" + "-".repeat(60) + "\n\n";
+        output += "\n";
       }
     });
 
     output += "\n\n";
   }
 
-  output += "NAVIGATION:\n";
-  output += "-----------\n";
-
   if (page > 1) {
-    output += `Previous page: curl 'changelog.world/cli?page=${page - 1}'\n`;
+    output += `Previous page: curl 'https://changelog.world/api/cli?page=${
+      page - 1
+    }'\n`;
   }
 
   if (page < totalPages) {
-    output += `Next page:     curl 'changelog.world/cli?page=${page + 1}'\n`;
+    output += `Next page:     curl 'https://changelog.world/api/cli?page=${
+      page + 1
+    }'\n`;
   }
 
-  output += `Jump to page:  curl 'changelog.world/cli?page=<PAGE_NUMBER>'\n`;
-  output += `Change limit:  curl 'changelog.world/cli?page=1&limit=<1-50>'\n`;
+  output += `Jump to page:  curl 'https://changelog.world/api/cli?page=<PAGE_NUMBER>'\n`;
+  output += `Change limit:  curl 'https://changelog.world/api/cli?page=1&limit=<1-50>'\n`;
 
   if (page > 1 || page < totalPages) {
     output += "\n";
