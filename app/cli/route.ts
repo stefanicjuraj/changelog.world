@@ -41,7 +41,7 @@ export async function GET(request: NextRequest) {
           "Cache-Control": "public, max-age=3600",
         },
       });
-    } catch (error) {
+    } catch (_error) {
       return new NextResponse("Error: Failed to fetch changelog data", {
         status: 500,
         headers: {
