@@ -30,4 +30,7 @@ curl 'https://changelog.world/api/cli?page=3'
 # Customize changelog entries per page
 curl 'https://changelog.world/api/cli?limit=20'
 curl 'https://changelog.world/api/cli?page=2&limit=5'
+
+# Filter by technology
+curl 'https://changelog.world/api/cli?tech=react'
 ```
