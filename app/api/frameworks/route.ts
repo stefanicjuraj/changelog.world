@@ -1,20 +1,17 @@
 import { NextResponse } from "next/server";
 import { NewsEntry } from "@/types/news";
 import { ChangelogType } from "@/types/changelog";
+import { getFrameworkFeedUrls } from "@/app/utils/techFeeds";
 
-export async function GET() {
+export async function GET(request: Request) {
   try {
-    const feedUrls = [
-      process.env.FEED_URL_REACT,
-      process.env.FEED_URL_NEXTJS,
-      process.env.FEED_URL_SVELTE,
-      process.env.FEED_URL_VUEJS,
-      process.env.FEED_URL_RAILS,
-      process.env.FEED_URL_LARAVEL,
-      process.env.FEED_URL_DJANGO,
-      process.env.FEED_URL_EXPRESS,
-      process.env.FEED_URL_SPRING_BOOT,
-    ].filter(Boolean) as string[];
+    const { searchParams } = new URL(request.url);
+    const techsParam = searchParams.get("tech");
+    const requestedTechs = techsParam
+      ? techsParam.split(",").map((t) => t.trim())
+      : undefined;
+
+    const feedUrls = getFrameworkFeedUrls(requestedTechs);
 
     const allNewsPromises = feedUrls.map(async (url) => {
       try {

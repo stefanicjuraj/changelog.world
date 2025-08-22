@@ -1,12 +1,17 @@
 import { NextResponse } from "next/server";
 import { NewsEntry } from "@/types/news";
 import { ChangelogType } from "@/types/changelog";
+import { getFeedUrls } from "@/app/utils/techFeeds";
 
 export async function GET(request: Request) {
   try {
     const { searchParams } = new URL(request.url);
     const page = parseInt(searchParams.get("page") || "1");
     const limit = parseInt(searchParams.get("limit") || "10");
+    const techsParam = searchParams.get("tech");
+    const requestedTechs = techsParam
+      ? techsParam.split(",").map((t) => t.trim())
+      : undefined;
 
     if (page < 1 || limit < 1 || limit > 50) {
       return new NextResponse(
@@ -20,28 +25,7 @@ export async function GET(request: Request) {
       );
     }
 
-    const feedUrls = [
-      process.env.FEED_URL_REACT,
-      process.env.FEED_URL_NEXTJS,
-      process.env.FEED_URL_TAILWIND,
-      process.env.FEED_URL_VERCEL,
-      process.env.FEED_URL_SVELTE,
-      process.env.FEED_URL_VUEJS,
-      process.env.FEED_URL_GO,
-      process.env.FEED_URL_PYTHON,
-      process.env.FEED_URL_PHP,
-      process.env.FEED_URL_SWIFT,
-      process.env.FEED_URL_RAILS,
-      process.env.FEED_URL_LARAVEL,
-      process.env.FEED_URL_DJANGO,
-      process.env.FEED_URL_CPP,
-      process.env.FEED_URL_GITHUB,
-      process.env.FEED_URL_JAVA,
-      process.env.FEED_URL_EXPRESS,
-      process.env.FEED_URL_SPRING_BOOT,
-      process.env.FEED_URL_NODEJS,
-      process.env.FEED_URL_GITLAB,
-    ].filter(Boolean) as string[];
+    const feedUrls = getFeedUrls(requestedTechs);
 
     const allNewsPromises = feedUrls.map(async (url) => {
       try {
@@ -158,6 +142,8 @@ function formatAsText(
 
   output += `Jump to page:  curl 'https://changelog.world/api/cli?page=<PAGE_NUMBER>'\n`;
   output += `Change limit:  curl 'https://changelog.world/api/cli?page=1&limit=<1-50>'\n`;
+  output += `Filter tech:  curl 'https://changelog.world/api/cli?tech=<TECH1,TECH2>'\n`;
+  output += `Available tech: react,nextjs,tailwind,vercel,svelte,vuejs,go,python,php,swift,rails,laravel,django,cpp,github,java,express,spring_boot,nodejs,gitlab\n`;
 
   if (page > 1 || page < totalPages) {
     output += "\n";

@@ -1,17 +1,17 @@
 import { NextResponse } from "next/server";
 import { NewsEntry } from "@/types/news";
 import { ChangelogType } from "@/types/changelog";
+import { getProgrammingFeedUrls } from "@/app/utils/techFeeds";
 
-export async function GET() {
+export async function GET(request: Request) {
   try {
-    const feedUrls = [
-      process.env.FEED_URL_GO,
-      process.env.FEED_URL_PYTHON,
-      process.env.FEED_URL_PHP,
-      process.env.FEED_URL_SWIFT,
-      process.env.FEED_URL_CPP,
-      process.env.FEED_URL_JAVA,
-    ].filter(Boolean) as string[];
+    const { searchParams } = new URL(request.url);
+    const techsParam = searchParams.get("tech");
+    const requestedTechs = techsParam
+      ? techsParam.split(",").map((t) => t.trim())
+      : undefined;
+
+    const feedUrls = getProgrammingFeedUrls(requestedTechs);
 
     const allNewsPromises = feedUrls.map(async (url) => {
       try {
