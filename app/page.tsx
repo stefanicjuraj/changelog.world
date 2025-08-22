@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, Suspense } from "react";
 import { NewsEntry } from "@/types/news";
 import { ChangelogType } from "@/types/changelog";
 import { NewsList } from "./components/NewsList";
@@ -9,7 +9,7 @@ import { TypeFilter } from "./components/TypeFilter";
 import { Loading } from "./components/Loading";
 import { useURLFilters } from "./hooks/useURLFilters";
 
-export default function Home() {
+function HomeContent() {
   const [newsData, setNewsData] = useState<NewsEntry[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -119,5 +119,13 @@ export default function Home() {
         )}
       </div>
     </main>
+  );
+}
+
+export default function Home() {
+  return (
+    <Suspense fallback={<Loading />}>
+      <HomeContent />
+    </Suspense>
   );
 }
