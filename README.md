@@ -4,7 +4,7 @@
 
 [changelog.world](https://changelog.world/) is a web application that displays technology news in a developer-friendly format. It can be browsed through the web interface or accessed directly in the terminal with CLI commands.
 
-Supported technologies: Python, Java, C++, Go, PHP, Swift, React, Angular, Vue, Next.js, Svelte, Ruby on Rails, Express, Laravel, Spring, Django, Tailwind CSS, Vercel, GitHub.
+Supported: Python, Java, C++, Go, PHP, Swift, React, Angular, Vue, Next.js, Svelte, Ruby on Rails, Express, Laravel, Spring, Django, Tailwind CSS, Vercel, GitHub.
 
 ## Features
 
