@@ -1,10 +1,8 @@
 # [changelog.world](https://changelog.world/)
 
-<img src="./public/assets/images/changelog.world-dark.png" width="700px" />
+<img src="./public/assets/images/changelog.world.png" width="100%" />
 
 [changelog.world](https://changelog.world/) is a web application that displays technology news in a developer-friendly format.
-
-**Programming languages**
 
 - [x] Python
 - [x] Java
@@ -12,9 +10,6 @@
 - [x] Go
 - [x] PHP
 - [x] Swift
-
-**Frameworks**
-
 - [x] React
 - [x] Angular
 - [x] Vue
@@ -25,15 +20,6 @@
 - [x] Laravel
 - [x] Spring
 - [x] Django
-
-**CSS**
-
 - [x] Tailwind CSS
-
-**Deployments**
-
 - [x] Vercel
-
-**Git**
-
 - [x] GitHub
