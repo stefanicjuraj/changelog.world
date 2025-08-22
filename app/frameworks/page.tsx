@@ -7,13 +7,19 @@ import { NewsList } from "@/app/components/NewsList";
 import { CategoryFilter } from "@/app/components/CategoryFilter";
 import { TypeFilter } from "@/app/components/TypeFilter";
 import { Loading } from "@/app/components/Loading";
+import { useURLFilters } from "@/app/hooks/useURLFilters";
 
 export default function Home() {
   const [newsData, setNewsData] = useState<NewsEntry[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
-  const [selectedTypes, setSelectedTypes] = useState<ChangelogType[]>([]);
+
+  const {
+    selectedCategories,
+    selectedTypes,
+    handleCategoryToggle,
+    handleTypeToggle,
+  } = useURLFilters();
 
   useEffect(() => {
     async function fetchNewsData() {
@@ -51,26 +57,6 @@ export default function Home() {
     newsData.forEach((item) => uniqueTypes.add(item.type));
     return Array.from(uniqueTypes);
   })();
-
-  const handleCategoryToggle = (category: string) => {
-    setSelectedCategories((prev) => {
-      if (prev.includes(category)) {
-        return prev.filter((cat) => cat !== category);
-      } else {
-        return [...prev, category];
-      }
-    });
-  };
-
-  const handleTypeToggle = (type: ChangelogType) => {
-    setSelectedTypes((prev) => {
-      if (prev.includes(type)) {
-        return prev.filter((t) => t !== type);
-      } else {
-        return [...prev, type];
-      }
-    });
-  };
 
   const filteredNews = (() => {
     return newsData.filter((item) => {
@@ -119,10 +105,6 @@ export default function Home() {
           selectedTypes={selectedTypes}
           onSelectType={handleTypeToggle}
         />
-      </div>
-
-      <div className="max-w-screen-md mx-auto mb-6 text-right">
-        <p className="text-gray-600">{filteredNews.length} results</p>
       </div>
 
       <div className="max-w-screen-md mx-auto rounded-lg shadow-sm border border-gray-200 p-6 bg-white dark:bg-[#111]">
