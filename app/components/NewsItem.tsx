@@ -4,7 +4,6 @@ import { getTechIcon, invertIconInDarkMode } from "@/app/utils/techIcons";
 
 interface NewsItemProps {
   title: string;
-  date?: string;
   category: string;
   url: string;
   type: ChangelogType;
@@ -14,20 +13,9 @@ function stripHtmlTags(html: string): string {
   return html.replace(/<[^>]*>/g, "");
 }
 
-function formatDate(dateString?: string): string | null {
-  if (!dateString) return null;
-  const date = new Date(dateString);
-  return date.toLocaleDateString("en-US", {
-    year: "numeric",
-    month: "short",
-    day: "numeric",
-  });
-}
-
-export function NewsItem({ title, date, category, type, url }: NewsItemProps) {
+export function NewsItem({ title, category, type, url }: NewsItemProps) {
   const typeColorClass = getTypeColor(type);
   const cleanTitle = stripHtmlTags(title);
-  const formattedDate = formatDate(date);
   const categoryIcon = getTechIcon(category);
   const shouldInvert = invertIconInDarkMode(category);
 
@@ -64,9 +52,6 @@ export function NewsItem({ title, date, category, type, url }: NewsItemProps) {
             >
               Source
             </a>
-            <div className="mt-2">
-              {formattedDate && <div className="text-xs">{formattedDate}</div>}
-            </div>
           </div>
         </div>
       </div>
