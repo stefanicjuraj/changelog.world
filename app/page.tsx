@@ -116,9 +116,9 @@ function HomeContent() {
         </p>
       </div>
 
-      <div className="max-w-screen-md mx-auto rounded-lg shadow-sm border border-gray-200 p-6 bg-white dark:bg-[#111]">
+      <div className="max-w-screen-md mx-auto rounded-lg shadow-sm border border-neutral-200 p-6 bg-white dark:bg-[#111]">
         {filteredNews.length === 0 ? (
-          <p className="py-4 text-center text-gray-500">
+          <p className="py-4 text-center text-neutral-500">
             No matching entries found
           </p>
         ) : (

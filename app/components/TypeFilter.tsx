@@ -21,7 +21,7 @@ export function getTypeColor(type: ChangelogType): string {
     case "Security":
       return "bg-orange-100 text-orange-800 hover:bg-orange-200";
     default:
-      return "bg-gray-100 text-gray-800 hover:bg-gray-200";
+      return "bg-neutral-100 text-neutral-800 hover:bg-neutral-200";
   }
 }
 
@@ -40,7 +40,7 @@ function getSelectedTypeColor(type: ChangelogType): string {
     case "Security":
       return "bg-orange-500 text-white";
     default:
-      return "bg-gray-500 text-white";
+      return "bg-neutral-500 text-white";
   }
 }
 
@@ -63,8 +63,8 @@ export function TypeFilter({
         }}
         className={`px-3 py-2 text-sm rounded transition-colors cursor-pointer ${
           selectedTypes.length === types.length
-            ? "bg-gray-700 text-white"
-            : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+            ? "bg-neutral-700 text-white"
+            : "bg-neutral-100 text-neutral-700 hover:bg-neutral-200"
         }`}
       >
         All

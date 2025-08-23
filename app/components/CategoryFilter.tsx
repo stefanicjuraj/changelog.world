@@ -26,7 +26,7 @@ export function CategoryFilter({
         className={`px-3 py-1 text-sm rounded transition-colors cursor-pointer ${
           selectedCategories.length === categories.length
             ? "bg-blue-500 text-white"
-            : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+            : "bg-neutral-100 text-neutral-700 hover:bg-neutral-200"
         }`}
       >
         All
@@ -39,10 +39,10 @@ export function CategoryFilter({
           <button
             key={category}
             onClick={() => onSelectCategory(category)}
-            className={`px-3 py-2 bg-gray-100 dark:bg-[#222] text-sm rounded transition-colors cursor-pointer flex items-center gap-2 ${
+            className={`px-3 py-2 bg-neutral-100 dark:bg-[#222] text-sm rounded transition-colors cursor-pointer flex items-center gap-2 ${
               selectedCategories.includes(category)
                 ? "border-1 border-black dark:border-white"
-                : "text-gray-700 hover:bg-gray-200 dark:bg-[#222] dark:text-white dark:hover:bg-[#1a1a1a]"
+                : "text-neutral-700 hover:bg-neutral-200 dark:bg-[#222] dark:text-white dark:hover:bg-[#1a1a1a]"
             }`}
           >
             {iconSrc && (
