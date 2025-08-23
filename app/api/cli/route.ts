@@ -147,18 +147,17 @@ function formatAsText(
   }
 
   if (page < totalPages) {
-    output += `Next page:     curl 'https://changelog.world/api/cli?page=${
+    output += `Next page:   curl 'https://changelog.world/api/cli?page=${
       page + 1
     }'\n`;
   }
 
-  output += `Jump to page:  curl 'https://changelog.world/api/cli?page=<PAGE_NUMBER>'\n`;
-  output += `Change limit:  curl 'https://changelog.world/api/cli?page=1&limit=<1-50>'\n`;
-  output += `Filter tech:   curl 'https://changelog.world/api/cli?tech=<TECH1,TECH2>'\n`;
-  output += `Filter type:   curl 'https://changelog.world/api/cli?type=<TYPE1,TYPE2>'\n`;
-  output += `Combined:      curl 'https://changelog.world/api/cli?tech=react,python&type=fixed,security'\n`;
-  output += `Available tech: react,nextjs,tailwind,vercel,svelte,vuejs,go,python,php,swift,rails,laravel,django,cpp,github,java,express,spring_boot,nodejs,gitlab\n`;
-  output += `Available type: added,changed,deprecated,removed,fixed,security (case-insensitive)\n`;
+  output += `Pagination:  curl 'https://changelog.world/api/cli?page=<PAGE_NUMBER>'\n`;
+  output += `Limit:       curl 'https://changelog.world/api/cli?page=1&limit=<1-50>'\n`;
+  output += `Tech:        curl 'https://changelog.world/api/cli?tech=<TECH1,TECH2>'\n`;
+  output += `Options:     react,nextjs,tailwind,vercel,svelte,vuejs,go,python,php,swift,rails,laravel,django,cpp,github,java,express,spring_boot,nodejs,gitlab\n`;
+  output += `Type:        curl 'https://changelog.world/api/cli?type=<TYPE1,TYPE2>'\n`;
+  output += `Options:     added,changed,deprecated,removed,fixed,security\n`;
 
   if (page > 1 || page < totalPages) {
     output += "\n";
