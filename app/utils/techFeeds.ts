@@ -28,27 +28,6 @@ export const TECH_FEED_MAPPING: TechFeedMapping = {
   gitlab: "FEED_URL_GITLAB",
 };
 
-export const FRAMEWORK_TECHS = [
-  "react",
-  "nextjs",
-  "svelte",
-  "vuejs",
-  "rails",
-  "laravel",
-  "django",
-  "express",
-  "spring_boot",
-];
-
-export const PROGRAMMING_TECHS = [
-  "go",
-  "python",
-  "php",
-  "swift",
-  "cpp",
-  "java",
-];
-
 export const ALL_TECHS = Object.keys(TECH_FEED_MAPPING);
 
 export const ALL_TYPES: ChangelogType[] = [
@@ -77,38 +56,6 @@ export function getFeedUrls(requestedTechs?: string[]): string[] {
   } else {
     techsToInclude = requestedTechs.filter((tech) =>
       TECH_FEED_MAPPING.hasOwnProperty(tech.toLowerCase())
-    );
-  }
-
-  return techsToInclude
-    .map((tech) => process.env[TECH_FEED_MAPPING[tech.toLowerCase()]])
-    .filter(Boolean) as string[];
-}
-
-export function getFrameworkFeedUrls(requestedTechs?: string[]): string[] {
-  let techsToInclude: string[];
-
-  if (!requestedTechs || requestedTechs.length === 0) {
-    techsToInclude = FRAMEWORK_TECHS;
-  } else {
-    techsToInclude = requestedTechs.filter((tech) =>
-      FRAMEWORK_TECHS.includes(tech.toLowerCase())
-    );
-  }
-
-  return techsToInclude
-    .map((tech) => process.env[TECH_FEED_MAPPING[tech.toLowerCase()]])
-    .filter(Boolean) as string[];
-}
-
-export function getProgrammingFeedUrls(requestedTechs?: string[]): string[] {
-  let techsToInclude: string[];
-
-  if (!requestedTechs || requestedTechs.length === 0) {
-    techsToInclude = PROGRAMMING_TECHS;
-  } else {
-    techsToInclude = requestedTechs.filter((tech) =>
-      PROGRAMMING_TECHS.includes(tech.toLowerCase())
     );
   }
 
