@@ -1,3 +1,6 @@
+import { ChangelogType } from "@/types/changelog";
+import { NewsEntry } from "@/types/news";
+
 export interface TechFeedMapping {
   [key: string]: string;
 }
@@ -48,6 +51,24 @@ export const PROGRAMMING_TECHS = [
 
 export const ALL_TECHS = Object.keys(TECH_FEED_MAPPING);
 
+export const ALL_TYPES: ChangelogType[] = [
+  "Added",
+  "Changed",
+  "Deprecated",
+  "Removed",
+  "Fixed",
+  "Security",
+];
+
+const TYPE_MAPPING: { [key: string]: ChangelogType } = {
+  added: "Added",
+  changed: "Changed",
+  deprecated: "Deprecated",
+  removed: "Removed",
+  fixed: "Fixed",
+  security: "Security",
+};
+
 export function getFeedUrls(requestedTechs?: string[]): string[] {
   let techsToInclude: string[];
 
@@ -94,4 +115,29 @@ export function getProgrammingFeedUrls(requestedTechs?: string[]): string[] {
   return techsToInclude
     .map((tech) => process.env[TECH_FEED_MAPPING[tech.toLowerCase()]])
     .filter(Boolean) as string[];
+}
+
+export function filterNewsByType(
+  newsEntries: NewsEntry[],
+  requestedTypes?: string[]
+): NewsEntry[] {
+  if (!requestedTypes || requestedTypes.length === 0) {
+    return newsEntries;
+  }
+
+  const validTypes: ChangelogType[] = requestedTypes
+    .map(
+      (type) =>
+        TYPE_MAPPING[type.toLowerCase()] ||
+        (ALL_TYPES.includes(type as ChangelogType)
+          ? (type as ChangelogType)
+          : null)
+    )
+    .filter((type): type is ChangelogType => type !== null);
+
+  if (validTypes.length === 0) {
+    return newsEntries;
+  }
+
+  return newsEntries.filter((entry) => validTypes.includes(entry.type));
 }
