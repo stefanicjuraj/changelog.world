@@ -2,7 +2,7 @@
 
 <img src="./public/assets/images/changelog.world.png" width="100%" />
 
-[changelog.world](https://changelog.world/) is a web application that displays technology news in a developer-friendly format. Browse through the web interface or access directly in the terminal with CLI commands.
+[changelog.world](https://changelog.world/) is a web application that displays tech changelogs and release notes in a developer-friendly format. Browse through the web interface or access directly through the terminal with CLI commands.
 
 Supported: Python, Java, C++, Go, PHP, Swift, React, Angular, Vue, Next.js, Svelte, Ruby on Rails, Express, Laravel, Spring, Django, Tailwind CSS, Vercel, GitHub.
 
