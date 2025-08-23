@@ -155,7 +155,7 @@ function formatAsText(
   output += `Pagination:  curl 'https://changelog.world/api/cli?page=<PAGE_NUMBER>'\n`;
   output += `Limit:       curl 'https://changelog.world/api/cli?page=1&limit=<1-50>'\n`;
   output += `Tech:        curl 'https://changelog.world/api/cli?tech=<TECH1,TECH2>'\n`;
-  output += `Options:     react,nextjs,tailwind,vercel,svelte,vuejs,go,python,php,swift,rails,laravel,django,cpp,github,java,express,spring_boot,nodejs,gitlab\n`;
+  output += `Options:     cpp,java,spring,nextjs,gitlab,python,php,nodejs,django,svelte,express,tailwind,swift,react,vuejs,vercel,github\n`;
   output += `Type:        curl 'https://changelog.world/api/cli?type=<TYPE1,TYPE2>'\n`;
   output += `Options:     added,changed,deprecated,removed,fixed,security\n`;
 
