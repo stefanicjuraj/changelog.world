@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { NewsEntry } from "@/types/news";
 import { ChangelogType } from "@/types/changelog";
-import { getFeedUrls } from "@/app/utils/techFeeds";
+import { getFeedUrls, filterNewsByType } from "@/app/utils/techFeeds";
 
 export async function GET(request: Request) {
   try {
@@ -11,6 +11,11 @@ export async function GET(request: Request) {
     const techsParam = searchParams.get("tech");
     const requestedTechs = techsParam
       ? techsParam.split(",").map((t) => t.trim())
+      : undefined;
+
+    const typesParam = searchParams.get("type");
+    const requestedTypes = typesParam
+      ? typesParam.split(",").map((t) => t.trim())
       : undefined;
 
     if (page < 1 || limit < 1 || limit > 50) {
@@ -54,12 +59,19 @@ export async function GET(request: Request) {
       return dateB - dateA;
     });
 
-    const newsEntries = mergedEntries.map((entry, index) => ({
+    let newsEntries = mergedEntries.map((entry, index) => ({
       ...entry,
       id: index + 1,
     }));
 
-    const textOutput = formatAsText(newsEntries, page, limit);
+    const filteredEntries = filterNewsByType(newsEntries, requestedTypes);
+
+    const finalEntries = filteredEntries.map((entry, index) => ({
+      ...entry,
+      id: index + 1,
+    }));
+
+    const textOutput = formatAsText(finalEntries, page, limit);
 
     return new NextResponse(textOutput, {
       headers: {
@@ -142,8 +154,11 @@ function formatAsText(
 
   output += `Jump to page:  curl 'https://changelog.world/api/cli?page=<PAGE_NUMBER>'\n`;
   output += `Change limit:  curl 'https://changelog.world/api/cli?page=1&limit=<1-50>'\n`;
-  output += `Filter tech:  curl 'https://changelog.world/api/cli?tech=<TECH1,TECH2>'\n`;
+  output += `Filter tech:   curl 'https://changelog.world/api/cli?tech=<TECH1,TECH2>'\n`;
+  output += `Filter type:   curl 'https://changelog.world/api/cli?type=<TYPE1,TYPE2>'\n`;
+  output += `Combined:      curl 'https://changelog.world/api/cli?tech=react,python&type=fixed,security'\n`;
   output += `Available tech: react,nextjs,tailwind,vercel,svelte,vuejs,go,python,php,swift,rails,laravel,django,cpp,github,java,express,spring_boot,nodejs,gitlab\n`;
+  output += `Available type: Added,Changed,Deprecated,Removed,Fixed,Security (case-insensitive)\n`;
 
   if (page > 1 || page < totalPages) {
     output += "\n";

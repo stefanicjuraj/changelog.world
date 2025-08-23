@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { NewsEntry } from "@/types/news";
 import { ChangelogType } from "@/types/changelog";
-import { getFeedUrls } from "@/app/utils/techFeeds";
+import { getFeedUrls, filterNewsByType } from "@/app/utils/techFeeds";
 
 export async function GET(request: Request) {
   try {
@@ -9,6 +9,11 @@ export async function GET(request: Request) {
     const techsParam = searchParams.get("tech");
     const requestedTechs = techsParam
       ? techsParam.split(",").map((t) => t.trim())
+      : undefined;
+
+    const typesParam = searchParams.get("type");
+    const requestedTypes = typesParam
+      ? typesParam.split(",").map((t) => t.trim())
       : undefined;
 
     const feedUrls = getFeedUrls(requestedTechs);
@@ -40,12 +45,19 @@ export async function GET(request: Request) {
       return dateB - dateA;
     });
 
-    const newsEntries = mergedEntries.map((entry, index) => ({
+    let newsEntries = mergedEntries.map((entry, index) => ({
       ...entry,
       id: index + 1,
     }));
 
-    return NextResponse.json(newsEntries);
+    const filteredEntries = filterNewsByType(newsEntries, requestedTypes);
+
+    const finalEntries = filteredEntries.map((entry, index) => ({
+      ...entry,
+      id: index + 1,
+    }));
+
+    return NextResponse.json(finalEntries);
   } catch (error) {
     console.error("Error fetching feeds:", error);
     return NextResponse.json(
