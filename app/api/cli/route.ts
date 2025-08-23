@@ -158,7 +158,7 @@ function formatAsText(
   output += `Filter type:   curl 'https://changelog.world/api/cli?type=<TYPE1,TYPE2>'\n`;
   output += `Combined:      curl 'https://changelog.world/api/cli?tech=react,python&type=fixed,security'\n`;
   output += `Available tech: react,nextjs,tailwind,vercel,svelte,vuejs,go,python,php,swift,rails,laravel,django,cpp,github,java,express,spring_boot,nodejs,gitlab\n`;
-  output += `Available type: Added,Changed,Deprecated,Removed,Fixed,Security (case-insensitive)\n`;
+  output += `Available type: added,changed,deprecated,removed,fixed,security (case-insensitive)\n`;
 
   if (page > 1 || page < totalPages) {
     output += "\n";
