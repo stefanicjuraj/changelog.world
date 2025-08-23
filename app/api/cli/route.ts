@@ -59,7 +59,7 @@ export async function GET(request: Request) {
       return dateB - dateA;
     });
 
-    let newsEntries = mergedEntries.map((entry, index) => ({
+    const newsEntries = mergedEntries.map((entry, index) => ({
       ...entry,
       id: index + 1,
     }));

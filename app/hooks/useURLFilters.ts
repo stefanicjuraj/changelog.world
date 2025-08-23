@@ -1,12 +1,13 @@
 "use client";
 
 import { useState, useEffect, useCallback, useRef } from "react";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useRouter, useSearchParams, usePathname } from "next/navigation";
 import { ChangelogType } from "@/types/changelog";
 
 export function useURLFilters() {
   const router = useRouter();
   const searchParams = useSearchParams();
+  const pathname = usePathname();
   const isInitialLoad = useRef(true);
 
   const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
@@ -18,6 +19,8 @@ export function useURLFilters() {
 
     if (categoriesFromURL) {
       setSelectedCategories(categoriesFromURL.split(",").filter(Boolean));
+    } else {
+      setSelectedCategories([]);
     }
 
     if (typesFromURL) {
@@ -34,6 +37,8 @@ export function useURLFilters() {
           ].includes(type)
         );
       setSelectedTypes(validTypes);
+    } else {
+      setSelectedTypes([]);
     }
 
     isInitialLoad.current = false;
@@ -52,11 +57,11 @@ export function useURLFilters() {
       }
 
       const query = params.toString();
-      const newURL = query ? `?${query}` : "";
+      const newURL = query ? `${pathname}?${query}` : pathname;
 
       router.replace(newURL, { scroll: false });
     },
-    [router]
+    [router, pathname]
   );
 
   useEffect(() => {
