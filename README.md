@@ -20,7 +20,7 @@ Supported: Python, Java, C++, Go, PHP, Swift, React, Angular, Vue, Next.js, Svel
 Access changelog data directly from your terminal using curl:
 
 ```bash
-curl 'https://changelog.world/api/cli'
+curl https://changelog.world/api/cli
 ```
 
 ### Options
@@ -43,7 +43,7 @@ Options:     added,changed,deprecated,removed,fixed,security
 
 ```bash
 # Get latest 10 changelog entries
-curl 'https://changelog.world/api/cli'
+curl https://changelog.world/api/cli
 
 # Navigate through changelog pages
 curl 'https://changelog.world/api/cli?page=2'
