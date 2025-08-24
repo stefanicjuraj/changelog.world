@@ -90,6 +90,29 @@ export async function GET(request: Request) {
   }
 }
 
+function getTypeColor(type: ChangelogType): string {
+  switch (type) {
+    case "Added":
+      return "\x1b[1;32m";
+    case "Changed":
+      return "\x1b[1;34m";
+    case "Deprecated":
+      return "\x1b[1;33m";
+    case "Removed":
+      return "\x1b[1;31m";
+    case "Fixed":
+      return "\x1b[1;35m";
+    case "Security":
+      return "\x1b[1;38;5;208m";
+    default:
+      return "\x1b[1;37m";
+  }
+}
+
+function resetColor(): string {
+  return "\x1b[0m";
+}
+
 function formatAsText(
   entries: NewsEntry[],
   page: number = 1,
@@ -127,7 +150,9 @@ function formatAsText(
           })
         : "No date";
 
-      output += `[${entry.category.toUpperCase()}] ${entry.type.toUpperCase()}\n`;
+      output += `[${entry.category.toUpperCase()}] ${getTypeColor(
+        entry.type
+      )}${entry.type.toUpperCase()}${resetColor()}\n`;
       output += `${entry.title}\n`;
       output += `Date: ${date}\n`;
       output += `Source: ${entry.url}\n`;
