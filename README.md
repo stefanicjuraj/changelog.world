@@ -1,6 +1,6 @@
 # [changelog.world](https://changelog.world/)
 
-<img src="./public/assets/images/changelog.world.png" width="100%" />
+<img src="./public/assets/images/changelog-world.png" width="100%" />
 
 [changelog.world](https://changelog.world/) is a web application that displays tech changelogs and release notes in a developer-friendly format. Browse through the web interface or access directly through the terminal with CLI commands.
 
