@@ -43,8 +43,12 @@ curl -L 'changelog.world/cli?limit=<1-50>'
 curl -L 'changelog.world/cli?tech=<TECH1,TECH2>'
 ```
 
+Supported technologies: `cpp`, `java`, `spring`, `nextjs`, `gitlab`, `python`, `php`, `nodejs`, `django`, `svelte`, `express`, `tailwind`, `swift`, `react`, `vuejs`, `vercel`, `github`
+
 #### Type
 
 ```bash
 curl -L 'changelog.world/cli?type=<TYPE1,TYPE2>'
 ```
+
+Supported types: `added`, `changed`, `deprecated`, `removed`, `fixed`, `security`
