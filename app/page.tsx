@@ -49,7 +49,7 @@ function HomeContent() {
   const categories = (() => {
     const uniqueCategories = new Set<string>();
     newsData.forEach((item) => uniqueCategories.add(item.category));
-    return Array.from(uniqueCategories);
+    return Array.from(uniqueCategories).sort();
   })();
 
   const types = (() => {
