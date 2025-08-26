@@ -25,7 +25,7 @@ export default function Navbar() {
       style={{ backgroundColor: "var(--app-navbar-color)" }}
       className="sticky top-0 max-w-screen-lg mx-auto rounded-b-lg shadow-sm z-50"
     >
-      <div className="px-4 mx-auto max-w-7xl py-7">
+      <div className="px-4 mx-auto py-7">
         <div className="flex justify-between">
           <div className="flex items-center">
             <Link href="/" className="text-xl font-bold">

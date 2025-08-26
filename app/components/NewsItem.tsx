@@ -21,13 +21,15 @@ export function NewsItem({ title, category, type, url }: NewsItemProps) {
 
   return (
     <div className="py-4 border-b border-neutral-200 last:border-0">
-      <div className="flex items-center gap-4">
-        <div className="flex items-center w-40 gap-3 min-w-40">
+      <div className="flex items-center gap-2 sm:gap-4">
+        <div className="flex items-center gap-2 w-32 min-w-32 sm:w-40 sm:min-w-40 sm:gap-3">
           {categoryIcon && (
             <img
               src={categoryIcon}
               alt={`${category} icon`}
-              className={`w-7 h-7 mr-3 ${shouldInvert ? "dark:invert" : ""}`}
+              className={`w-6 h-6 sm:w-7 sm:h-7 ${
+                shouldInvert ? "dark:invert" : ""
+              }`}
             />
           )}
           <div className="flex flex-col items-start">

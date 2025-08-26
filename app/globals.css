@@ -19,4 +19,5 @@ body {
   background-color: var(--app-background-color);
   color: var(--app-text-color);
   font-family: "JetBrains Mono", monospace;
+  overflow-x: hidden;
 }
