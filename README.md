@@ -4,7 +4,7 @@
 
 [changelog.world](https://changelog.world/) is a web application that displays tech changelogs and release notes in a developer-friendly format. Browse through the [web interface](https://changelog.world/) or access directly through the terminal with [CLI commands](#cli).
 
-Supported: C++, Java, Spring, Next.js, GitLab, Python, PHP, Node.js, Django, Svelte, Express, Tailwind CSS, Swift, React, Vue.js, Vercel, GitHub.
+Supported: C++, Java, Spring, Go, Next.js, GitLab, Python, PHP, Node.js, Django, Svelte, Express, Tailwind CSS, Swift, React, Vue.js, Vercel, GitHub.
 
 ## Features
 
@@ -43,7 +43,7 @@ curl -L 'changelog.world/cli?limit=<1-50>'
 curl -L 'changelog.world/cli?tech=<TECH1,TECH2>'
 ```
 
-Supported technologies: `cpp`, `java`, `spring`, `nextjs`, `gitlab`, `python`, `php`, `nodejs`, `django`, `svelte`, `express`, `tailwind`, `swift`, `react`, `vuejs`, `vercel`, `github`
+Supported technologies: `cpp`, `java`, `spring`, `go`, `nextjs`, `gitlab`, `python`, `php`, `nodejs`, `django`, `svelte`, `express`, `tailwind`, `swift`, `react`, `vuejs`, `vercel`, `github`
 
 #### Type
 
