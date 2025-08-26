@@ -1,5 +1,5 @@
-import { ChangelogType } from "@/types/changelog";
-import { NewsEntry } from "@/types/news";
+import { ChangelogType } from "@/app/types/changelog";
+import { NewsEntry } from "@/app/types/news";
 
 export interface TechFeedMapping {
   [key: string]: string;

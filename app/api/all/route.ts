@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
-import { NewsEntry } from "@/types/news";
-import { ChangelogType } from "@/types/changelog";
+import { NewsEntry } from "@/app/types/news";
+import { ChangelogType } from "@/app/types/changelog";
 import { getFeedUrls, filterNewsByType } from "@/app/utils/techFeeds";
 
 export async function GET(request: Request) {

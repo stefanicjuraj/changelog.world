@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useCallback, useRef } from "react";
 import { useRouter, useSearchParams, usePathname } from "next/navigation";
-import { ChangelogType } from "@/types/changelog";
+import { ChangelogType } from "@/app/types/changelog";
 
 export function useURLFilters() {
   const router = useRouter();

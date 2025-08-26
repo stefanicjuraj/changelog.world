@@ -1,5 +1,5 @@
 import { NewsItem } from "./NewsItem";
-import { NewsEntry } from "@/types/news";
+import { NewsEntry } from "@/app/types/news";
 
 interface NewsListProps {
   news: NewsEntry[];

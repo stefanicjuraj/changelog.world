@@ -1,4 +1,4 @@
-import { ChangelogType } from "@/types/changelog";
+import { ChangelogType } from "@/app/types/changelog";
 
 interface TypeFilterProps {
   types: ChangelogType[];

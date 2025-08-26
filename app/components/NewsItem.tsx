@@ -1,4 +1,4 @@
-import { ChangelogType } from "@/types/changelog";
+import { ChangelogType } from "@/app/types/changelog";
 import { getTypeColor } from "./TypeFilter";
 import { getTechIcon, invertIconInDarkMode } from "@/app/utils/techIcons";
 

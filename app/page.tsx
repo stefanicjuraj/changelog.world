@@ -1,8 +1,8 @@
 "use client";
 
 import { useState, useEffect, Suspense } from "react";
-import { NewsEntry } from "@/types/news";
-import { ChangelogType } from "@/types/changelog";
+import { NewsEntry } from "@/app/types/news";
+import { ChangelogType } from "@/app/types/changelog";
 import { NewsList } from "./components/NewsList";
 import { CategoryFilter } from "./components/CategoryFilter";
 import { TypeFilter } from "./components/TypeFilter";
