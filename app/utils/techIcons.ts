@@ -40,6 +40,8 @@ export const getTechIcon = (tech: string): string | null => {
       return "/assets/icons/nodejs.svg";
     case "gitlab":
       return "/assets/icons/gitlab.svg";
+    case "wordpress":
+      return "/assets/icons/wordpress.svg";
     default:
       return null;
   }
