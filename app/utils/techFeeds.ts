@@ -26,7 +26,7 @@ export const TECH_FEED_MAPPING: TechFeedMapping = {
   tailwind: "FEED_URL_TAILWIND",
   vercel: "FEED_URL_VERCEL",
   vuejs: "FEED_URL_VUEJS",
-  rust: "FEED_URL_WORDPRESS",
+  wordpress: "FEED_URL_WORDPRESS",
 };
 
 export const ALL_TECHS = Object.keys(TECH_FEED_MAPPING);
