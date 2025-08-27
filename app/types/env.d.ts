@@ -21,5 +21,6 @@ declare namespace NodeJS {
     FEED_URL_NODEJS: string;
     FEED_URL_GITLAB: string;
     FEED_URL_WORDPRESS: string;
+    FEED_URL_DENO: string;
   }
 }

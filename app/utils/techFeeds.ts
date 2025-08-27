@@ -27,6 +27,7 @@ export const TECH_FEED_MAPPING: TechFeedMapping = {
   vercel: "FEED_URL_VERCEL",
   vuejs: "FEED_URL_VUEJS",
   wordpress: "FEED_URL_WORDPRESS",
+  deno: "FEED_URL_DENO",
 };
 
 export const ALL_TECHS = Object.keys(TECH_FEED_MAPPING);
