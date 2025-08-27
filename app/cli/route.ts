@@ -180,7 +180,7 @@ function formatAsText(
   output += `Pagination:  curl 'https://changelog.world/cli?page=<PAGE_NUMBER>'\n`;
   output += `Limit:       curl 'https://changelog.world/cli?page=1&limit=<1-50>'\n`;
   output += `Tech:        curl 'https://changelog.world/cli?tech=<TECH1,TECH2>'\n`;
-  output += `Options:     cpp,deno,django,express,github,gitlab,go,java,laravel,nextjs,nodejs,php,python,rails,react,spring_boot,svelte,swift,tailwind,vercel,vuejs,wordpress\n`;
+  output += `Options:     cpp,deno,django,express,github,gitlab,go,java,laravel,nextjs,nodejs,php,python,rails,react,slack,spring_boot,svelte,swift,tailwind,vercel,vuejs,wordpress\n`;
   output += `Type:        curl 'https://changelog.world/cli?type=<TYPE1,TYPE2>'\n`;
   output += `Options:     added,changed,deprecated,removed,fixed,security\n`;
 

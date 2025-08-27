@@ -28,6 +28,7 @@ export const TECH_FEED_MAPPING: TechFeedMapping = {
   vuejs: "FEED_URL_VUEJS",
   wordpress: "FEED_URL_WORDPRESS",
   deno: "FEED_URL_DENO",
+  slack: "FEED_URL_SLACK",
 };
 
 export const ALL_TECHS = Object.keys(TECH_FEED_MAPPING);

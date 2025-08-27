@@ -25,6 +25,7 @@ const nextConfig: NextConfig = {
     FEED_URL_GITLAB: process.env.FEED_URL_GITLAB || "",
     FEED_URL_WORDPRESS: process.env.FEED_URL_WORDPRESS || "",
     FEED_URL_DENO: process.env.FEED_URL_DENO || "",
+    FEED_URL_SLACK: process.env.FEED_URL_SLACK || "",
   },
 };
 
