@@ -23,6 +23,7 @@ const nextConfig: NextConfig = {
     FEED_URL_SPRING_BOOT: process.env.FEED_URL_SPRING_BOOT || "",
     FEED_URL_NODEJS: process.env.FEED_URL_NODEJS || "",
     FEED_URL_GITLAB: process.env.FEED_URL_GITLAB || "",
+    FEED_URL_WORDPRESS: process.env.FEED_URL_WORDPRESS || "",
   },
 };
 
