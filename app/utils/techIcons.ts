@@ -42,6 +42,8 @@ export const getTechIcon = (tech: string): string | null => {
       return "/assets/icons/gitlab.svg";
     case "wordpress":
       return "/assets/icons/wordpress.svg";
+    case "deno":
+      return "/assets/icons/deno.svg";
     default:
       return null;
   }
