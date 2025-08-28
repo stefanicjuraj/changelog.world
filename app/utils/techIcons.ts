@@ -52,6 +52,8 @@ export const getTechIcon = (tech: string): string | null => {
       return "/assets/icons/figma.svg";
     case "netlify":
       return "/assets/icons/netlify.svg";
+    case "react native":
+      return "/assets/icons/react.svg";
     default:
       return null;
   }
