@@ -43,7 +43,7 @@ curl -L 'changelog.world/cli?limit=<1-50>'
 curl -L 'changelog.world/cli?tech=<TECH1,TECH2>'
 ```
 
-Supported technologies: `cpp`, `deno`, `django`, `express`, `figma`, `github`, `gitlab`, `go`, `java`, `laravel`, `nextjs`, `nodejs`, `php`, `python`, `rails`, `react`, `scala`, `slack`, `spring_boot`, `svelte`, `swift`, `tailwind`, `vercel`, `vuejs`, `wordpress`
+Supported technologies: `cpp`, `deno`, `django`, `express`, `figma`, `github`, `gitlab`, `go`, `java`, `laravel`, `netlify`, `nextjs`, `nodejs`, `php`, `python`, `rails`, `react`, `scala`, `slack`, `spring_boot`, `svelte`, `swift`, `tailwind`, `vercel`, `vuejs`, `wordpress`
 
 #### Type
 
