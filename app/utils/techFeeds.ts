@@ -31,6 +31,7 @@ export const TECH_FEED_MAPPING: TechFeedMapping = {
   slack: "FEED_URL_SLACK",
   scala: "FEED_URL_SCALA",
   figma: "FEED_URL_FIGMA",
+  netlify: "FEED_URL_NETLIFY",
 };
 
 export const ALL_TECHS = Object.keys(TECH_FEED_MAPPING);
