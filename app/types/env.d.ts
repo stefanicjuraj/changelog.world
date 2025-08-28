@@ -26,5 +26,6 @@ declare namespace NodeJS {
     FEED_URL_SCALA: string;
     FEED_URL_FIGMA: string;
     FEED_URL_NETLIFY: string;
+    FEED_URL_REACT_NATIVE: string;
   }
 }

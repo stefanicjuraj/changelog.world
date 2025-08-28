@@ -29,6 +29,7 @@ const nextConfig: NextConfig = {
     FEED_URL_SCALA: process.env.FEED_URL_SCALA || "",
     FEED_URL_FIGMA: process.env.FEED_URL_FIGMA || "",
     FEED_URL_NETLIFY: process.env.FEED_URL_NETLIFY || "",
+    FEED_URL_REACT_NATIVE: process.env.FEED_URL_REACT_NATIVE || "",
   },
 };
 
