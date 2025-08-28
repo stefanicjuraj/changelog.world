@@ -48,6 +48,8 @@ export const getTechIcon = (tech: string): string | null => {
       return "/assets/icons/slack.svg";
     case "scala":
       return "/assets/icons/scala.svg";
+    case "figma":
+      return "/assets/icons/figma.svg";
     default:
       return null;
   }
