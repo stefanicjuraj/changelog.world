@@ -46,6 +46,8 @@ export const getTechIcon = (tech: string): string | null => {
       return "/assets/icons/deno.svg";
     case "slack":
       return "/assets/icons/slack.svg";
+    case "scala":
+      return "/assets/icons/scala.svg";
     default:
       return null;
   }
