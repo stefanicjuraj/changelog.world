@@ -30,6 +30,7 @@ export const TECH_FEED_MAPPING: TechFeedMapping = {
   deno: "FEED_URL_DENO",
   slack: "FEED_URL_SLACK",
   scala: "FEED_URL_SCALA",
+  figma: "FEED_URL_FIGMA",
 };
 
 export const ALL_TECHS = Object.keys(TECH_FEED_MAPPING);

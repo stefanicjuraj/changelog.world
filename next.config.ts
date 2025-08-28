@@ -27,6 +27,7 @@ const nextConfig: NextConfig = {
     FEED_URL_DENO: process.env.FEED_URL_DENO || "",
     FEED_URL_SLACK: process.env.FEED_URL_SLACK || "",
     FEED_URL_SCALA: process.env.FEED_URL_SCALA || "",
+    FEED_URL_FIGMA: process.env.FEED_URL_FIGMA || "",
   },
 };
 

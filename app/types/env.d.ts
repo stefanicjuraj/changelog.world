@@ -24,5 +24,6 @@ declare namespace NodeJS {
     FEED_URL_DENO: string;
     FEED_URL_SLACK: string;
     FEED_URL_SCALA: string;
+    FEED_URL_FIGMA: string;
   }
 }
