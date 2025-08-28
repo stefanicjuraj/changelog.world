@@ -29,6 +29,7 @@ export const TECH_FEED_MAPPING: TechFeedMapping = {
   wordpress: "FEED_URL_WORDPRESS",
   deno: "FEED_URL_DENO",
   slack: "FEED_URL_SLACK",
+  scala: "FEED_URL_SCALA",
 };
 
 export const ALL_TECHS = Object.keys(TECH_FEED_MAPPING);
