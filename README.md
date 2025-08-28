@@ -1,6 +1,6 @@
 # [changelog.world](https://changelog.world/)
 
-<img src="./public/assets/images/changelog-world.png" width="100%" />
+![changelog.world](./public/assets/gifs/changelog-world.gif)
 
 [changelog.world](https://changelog.world/) is a web application that displays tech changelogs and release notes in a developer-friendly format. Browse through the [web interface](https://changelog.world/) or access directly through the terminal with [CLI commands](#cli).
 
@@ -16,6 +16,8 @@ Supported: C++, Deno, Django, Express, Figma, GitHub, GitLab, Go, Java, Laravel,
 - **Fast Updates**: Fresh content updated regularly from official sources
 
 ## CLI
+
+<img src="./public/assets/images/changelog-world.png" width="100%" />
 
 ```bash
 curl https://changelog.world/cli
