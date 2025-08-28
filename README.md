@@ -4,7 +4,7 @@
 
 [changelog.world](https://changelog.world/) is a web application that displays tech changelogs and release notes in a developer-friendly format. Browse through the [web interface](https://changelog.world/) or access directly through the terminal with [CLI commands](#cli).
 
-Supported: C++, Deno, Django, Express, GitHub, GitLab, Go, Java, Laravel, Next.js, Node.js, PHP, Python, Rails, React, Slack, Spring Boot, Svelte, Swift, Tailwind, Vercel, Vue.js, WordPress.
+Supported: C++, Deno, Django, Express, GitHub, GitLab, Go, Java, Laravel, Next.js, Node.js, PHP, Python, Rails, React, Scala, Slack, Spring Boot, Svelte, Swift, Tailwind, Vercel, Vue.js, WordPress.
 
 ## Features
 
@@ -43,7 +43,7 @@ curl -L 'changelog.world/cli?limit=<1-50>'
 curl -L 'changelog.world/cli?tech=<TECH1,TECH2>'
 ```
 
-Supported technologies: `cpp`, `deno`, `django`, `express`, `github`, `gitlab`, `go`, `java`, `laravel`, `nextjs`, `nodejs`, `php`, `python`, `rails`, `react`, `slack`, `spring_boot`, `svelte`, `swift`, `tailwind`, `vercel`, `vuejs`, `wordpress`
+Supported technologies: `cpp`, `deno`, `django`, `express`, `github`, `gitlab`, `go`, `java`, `laravel`, `nextjs`, `nodejs`, `php`, `python`, `rails`, `react`, `scala`, `slack`, `spring_boot`, `svelte`, `swift`, `tailwind`, `vercel`, `vuejs`, `wordpress`
 
 #### Type
 
