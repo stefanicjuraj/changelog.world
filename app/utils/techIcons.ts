@@ -54,6 +54,8 @@ export const getTechIcon = (tech: string): string | null => {
       return "/assets/icons/netlify.svg";
     case "react native":
       return "/assets/icons/react.svg";
+    case "expo":
+      return "/assets/icons/expo.svg";
     default:
       return null;
   }
