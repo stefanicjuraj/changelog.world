@@ -33,6 +33,7 @@ export const TECH_FEED_MAPPING: TechFeedMapping = {
   figma: "FEED_URL_FIGMA",
   netlify: "FEED_URL_NETLIFY",
   react_native: "FEED_URL_REACT_NATIVE",
+  expo: "FEED_URL_EXPO",
 };
 
 export const ALL_TECHS = Object.keys(TECH_FEED_MAPPING);
