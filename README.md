@@ -4,7 +4,7 @@
 
 [changelog.world](https://changelog.world/) is a web application that displays tech changelogs and release notes in a developer-friendly format. Browse through the [web interface](https://changelog.world/) or access directly through the terminal with [CLI commands](#cli).
 
-Supported: C++, Deno, Django, Express, Figma, GitHub, GitLab, Go, Java, Laravel, Next.js, Node.js, PHP, Python, Rails, React, React Native, Scala, Slack, Spring Boot, Svelte, Swift, Tailwind, Vercel, Vue.js, WordPress.
+Supported: C++, Deno, Django, Expo, Express, Figma, GitHub, GitLab, Go, Java, Laravel, Next.js, Node.js, PHP, Python, Rails, React, React Native, Scala, Slack, Spring Boot, Svelte, Swift, Tailwind, Vercel, Vue.js, WordPress.
 
 ## CLI
 
@@ -36,7 +36,7 @@ curl -L 'changelog.world/cli?limit=<1-50>'
 curl -L 'changelog.world/cli?tech=<TECH1,TECH2>'
 ```
 
-Supported: `cpp`, `deno`, `django`, `express`, `figma`, `github`, `gitlab`, `go`, `java`, `laravel`, `netlify`, `nextjs`, `nodejs`, `php`, `python`, `rails`, `react`, `react_native`, `scala`, `slack`, `spring_boot`, `svelte`, `swift`, `tailwind`, `vercel`, `vuejs`, `wordpress`
+Supported: `cpp`, `deno`, `django`, `expo`, `express`, `figma`, `github`, `gitlab`, `go`, `java`, `laravel`, `netlify`, `nextjs`, `nodejs`, `php`, `python`, `rails`, `react`, `react_native`, `scala`, `slack`, `spring_boot`, `svelte`, `swift`, `tailwind`, `vercel`, `vuejs`, `wordpress`
 
 #### Type
 
